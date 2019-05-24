@@ -1,6 +1,9 @@
 @extends('backend.layout.master')
 @section('content')
-<h1 class="h3 mb-4 text-gray-800">บันทึกข้อความ</h1>
+
+
+<h1 class="h3 mb-4 text-gray-800"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+    แบบบันทึกข้อความ</h1>
 <div class="card shadow ">
     <div class="card-heading">
         <div class="container mt-3">
@@ -27,7 +30,7 @@
                                 <td>{{$memo->subject}}</td>
                                 <td >
                                     <div class="button-group">
-                                        <a href="/admin/memo/{{$memo->id}}/edit" class="btn btn-warning btn-sm"><i
+                                        <a href="/backend/memo/{{$memo->id}}/edit" class="btn btn-warning btn-sm"><i
                                                 class="fa fa-edit"></i></a>
 
                                         <a href="javaScript: deleteItem('{{$memo->id}}')" class="btn  btn-danger btn-sm">

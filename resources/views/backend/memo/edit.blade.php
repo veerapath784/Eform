@@ -1,11 +1,13 @@
 @extends('backend.layout.master')
 @section('content')
 
-<h1 class="h3 mb-4 text-gray-800">สร้างบันทึกข้อความ</h1>
+
+<h1 class="h3 mb-4 text-gray-800"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+    แบบบันทึกข้อความ</h1>
 <div class="card shadow ">
     <div class="card-heading">
         <div class="container mt-3">
-            <h4 class="card-title">เพื่มรายการ บันทึกข้อความ</h4>
+            <h4 class="card-title">แก้ไข บันทึกข้อความ</h4>
         </div>
         <div class="card-body">
 
@@ -85,7 +87,7 @@
                     </div>
 
         </div>
-        <button type="submit" class="btn btn-warning"><i class="fa fa-edit"></i> แก้ไขข้อมูล</button>
+        <button type="submit" class="btn btn-warning"><i class="fa fa-edit"></i> บันทึกข้อมูล</button>
         </form>
     </div>
 </div>

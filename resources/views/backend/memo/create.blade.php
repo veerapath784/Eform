@@ -1,11 +1,13 @@
 @extends('backend.layout.master')
 @section('content')
 
-<h1 class="h3 mb-4 text-gray-800">สร้างบันทึกข้อความ</h1>
+
+<h1 class="h3 mb-4 text-gray-800"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+    แบบบันทึกข้อความ</h1>
 <div class="card shadow ">
     <div class="card-heading">
         <div class="container mt-3">
-            <h4 class="card-title">เพื่มรายการ บันทึกข้อความ</h4>
+            <h4 class="card-title">สร้าง บันทึกข้อความ</h4>
         </div>
         <div class="card-body">
 
@@ -69,7 +71,7 @@
                                 <input type="text" name="ending" class="form-control">
                             </div> --}}
                             <div class="form-group col-md-7">
-                                <label for="inputState">State</label>
+                                <label for="inputState">คำลงท้าย</label>
                                 <select id="inputState" name="ending" class="form-control">
                                   <option selected>คำลงท้าย...</option>
                                   <option>จึงเรียนมาเพื่อโปรดพิจารณา</option>
