@@ -10,6 +10,65 @@
             เพิ่มหนังสือบันทึกข้อความ</a></span>
         </div>
         <div class="card-body">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered ">
+                        <tr  class="text-center">
+                            <th>#</th>
+                            <th >เรื่อง</th>
+
+                            <th width="100">จัดการ</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($memos as $memo)
+                            <tr>
+                                <td class="text-center">{{$memo->id}}</td>
+                                <td>{{$memo->subject}}</td>
+                                <td >
+                                    <div class="button-group">
+                                        <a href="/admin/memo/{{$memo->id}}/edit" class="btn btn-warning btn-sm"><i
+                                                class="fa fa-edit"></i></a>
+
+                                        <a href="javaScript: deleteItem('{{$memo->id}}')" class="btn  btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
+
+        @section('script')
+                <script>
+                    var deleteItem = function deleteItem(id) {
+
+                        swal.fire({
+                            title: "แน่ใจหรือไม่ ?",
+                            text: "คุณต้องการลบข้อมูลนี้จริงหรือไม่ ?",
+                            type: "warning",
+                            showCancelButton: true,
+                        }).then(function (result) {
+                            if (result.value) {
+                                axios.delete('/backend/memo/' + id).then(function (response) {
+                                    window.location.href = "/backend/memo/";
+                                }).catch(function (error) {
+                                    console.log(error.response)
+                                    swal('เกิดข้อผิดพลาด', 'ไม่สามารถลบข้อมูลได้ \n ' + error.response.statusText,
+                                        'error');
+                                });
+                            }
+                        })
+
+
+                    }
+                </script>
+            </div>
+        @endsection
+        </div>
 
 
 

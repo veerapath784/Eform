@@ -13,7 +13,7 @@ class MemoController extends Controller
     'at' => 'required',
     'date' => 'required',
     'subject' => 'required',
-    'deteil' => 'required|max:5',
+    'deteil' => 'required',
     'study' => 'required',
     'sign' => 'required',
 
@@ -28,7 +28,9 @@ protected $path = "/backend/memo";
      */
     public function index()
     {
-        return view('backend.memo.index');
+        return view('backend.memo.index', [
+            'memos' => Memo::all()
+        ]);
     }
 
     /**
