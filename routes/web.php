@@ -23,4 +23,7 @@ Route::group(['prefix' => 'backend'], function(){
     Route::resource('memo', 'Backend\MemoController');
 
 
+    Route::get('/preview/{id}', 'Backend\ServiceController@preview');
+
+
 });

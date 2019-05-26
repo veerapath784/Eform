@@ -35,6 +35,8 @@
 
                                         <a href="javaScript: deleteItem('{{$memo->id}}')" class="btn  btn-danger btn-sm">
                                             <i class="fa fa-trash"></i>
+                                            <a href="javaScript: deleteItem('{{$memo->id}}')" class="btn  btn-danger btn-sm">
+                                                    <i class="fa fa-trash"></i>
                                         </a>
                                     </div>
                                 </td>
