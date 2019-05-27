@@ -88,6 +88,9 @@
   ),
   'thsarabunnew' => array(
     'normal' => $fontDir . '/3bd0c67632a9bfa81d5b83cf624da451',
+    'bold' => $fontDir . '\b6328875f22fc2bce54335d791fb3bc7',
+    'italic' => $fontDir . '\5139d91f0645206dcedb08cd667109bb',
+    'bold_italic' => $fontDir . '\b837841f6c7d8df66bb46bb9deeac3a2',
   ),
   'thniramit' => array(
     'normal' => $fontDir . '/1b801074fe60943e166d5b35d4267785',

@@ -1,62 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
-    <title>สวัสดี</title>
+    <title>บันทึกข้อความ</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
         @font-face {
-            font-family: 'THNiramit';
+            font-family: 'THSarabunNew';
             font-style: normal;
             font-weight: normal;
-            src: url("{{ storage_path('fonts/TH Niramit AS.ttf') }}") format('truetype');
+            src: url("{{ storage_path('fonts/THSarabunNew.ttf') }}") format('truetype');
         }
 
         @font-face {
-            font-family: 'THNiramit';
+            font-family: 'THSarabunNew';
             font-style: normal;
             font-weight: bold;
-            src: url("{{ storage_path('fonts/TH Niramit AS Bold.ttf') }}") format('truetype');
+            src: url("{{ storage_path('fonts/THSarabunNew Bold.ttf') }}") format('truetype');
         }
 
         @font-face {
-            font-family: 'THNiramit';
+            font-family: 'THSarabunNew';
             font-style: italic;
             font-weight: normal;
-            src: url("{{ storage_path('fonts/TH Niramit AS Italic.ttf') }}") format('truetype');
+            src: url("{{ storage_path('fonts/THSarabunNew Italic.ttf') }}") format('truetype');
         }
 
         @font-face {
-            font-family: 'THNiramit';
+            font-family: 'THSarabunNew';
             font-style: italic;
             font-weight: bold;
-            src: url("{{ storage_path('fonts/TH Niramit AS Bold Italic.ttf') }}") format('truetype');
+            src: url("{{ storage_path('fonts/THSarabunNew BoldItalic.ttf') }}") format('truetype');
         }
 
         body {
-            font-family: "THNiramit";
-            font-size: 16px;
+            font-family: "THSarabunNew";
+            font-size: 24px;
+            margin-left: 85px;
+            margin-right: 70px;
         }
 
-        .table {
-            border-spacing: 0;
-            width: 300px;
+        .center {
+            text-align: center;
+            margin-left: -10.1px;
+            margin-top: -20px;
+            margin-bottom: -75px;
+            font-size: 18px;
         }
 
-        th,
-        td {
-            border: 0.01em solid #333;
-            border-collapse: collapse;
-            padding: 5px;
-        }
 
         .float-right {
             float: right;
+
+
         }
 
         .float-left {
             float: left;
+            margin-top: 50px;
         }
 
         .clearfix {
@@ -158,119 +159,64 @@
         button.bg-gray-900:hover {
             background-color: #0c0e10 !important
         }
-
     </style>
 </head>
 
 <body>
-    <div>
+    <div class="float-left">
+        <img src="{{ public_path('thai.png') }}" alt="" width="65px;">
+    </div>
+    <div class="center">
+        <h1>บันทึกข้อความ</h1>
+    </div>
 
-        <div class="float-left">
-            <img style="margin-left: 25px;" src="{{ public_path('images/digital_logo.gif') }}" alt="" width="200">
-            <div style="font-weight: bold; font-size: 18px; margin-left: 65px;">ใบแจ้งซ่อม (ต้นฉบับ)</div>
-        </div>
-        <div class="float-right">
-            <strong>งานซ่อมบำรุง สำนักดิจิทัลเพื่อการศึกษา</strong><br>
-            เลขที่ 202 ชั้น 2 อาคารสำนักดิจิทัลเพื่อการศึกษา<br>
-            มหาวิทยาลัยราชภัฏเชียงใหม่<br>
-            ต.ช้างเผือก อ.เมืองเชียงใหม่ จ.เชียงใหม่ 50100 <br>
-            <abbr title="Phone">โทรศัพท์:</abbr> 053885925-6
-        </div>
-        <div class="clearfix"></div>
-    </div>
     <div>
-        <div class="float-left">
-            <h4 style="margin-bottom: -2px;">ผู้ขอรับบริการ</h4>
-            <p>
-                <strong>ชื่อ-สกุล : </strong> นายบัณฑิต นันทะเทศ <br>
-                <strong>ประเภท : </strong> นักศึกษา <br>
-                <strong>รหัสนักศึกษา : </strong> 61234567 <br>
-                <strong>โทรศัพท์ : </strong> 0834600010 <br>
-            </p>
+        <div class="float-left" >
+            <strong>ส่วนราชการ</strong>&nbsp; {{-- เพื่มข้อความ --}} สำนักดิจิทัลเพื่อการศึกษา
+            <div style="margin-top:-40px; margin-left:80px;">
+                ...............................................................</div>
         </div>
         <div class="float-right">
-            <table class="table" style="margin-top: 50px;">
-                <tr>
-                    <th class="bg-gray-100">รหัส #</th>
-                    <td class="text-right">2311111</td>
-                </tr>
-                <tr>
-                    <th class="bg-gray-100">วันที่</th>
-                    <td class="text-right">23, เมษายน 2562</td>
-                </tr>
-                <tr>
-                    <th class="bg-gray-100">เวลา </th>
-                    <td class="text-right">12:30</td>
-                </tr>
-            </table>
+            <strong>โทร.</strong>&nbsp; {{-- เพื่มข้อความ --}}๕๖๘๖
+            <div style="margin-top:-40px; margin-left:-20px;">
+                ..................................................................</div>
         </div>
-        <div class="clearfix"></div>
     </div>
-    <!-- <hr style="border: #ccc solid 0.02em;"> -->
-    <!-- <p><strong>สถานที่รับบริการ: </strong>มหาวิทยาลัยราชภัฏเชียงใหม่, ศูนย์แม่ริม </p> -->
-    <h4 style="margin-bottom: 5px; margin-top: 5px;">รายละเอียด</h4>
-    <table class="table" style="width: 100%;">
-        <tr>
-            <th>อุปกรณ์ที่นำมารับบริการ</th>
-            <td>Notebook HP Omen Harddisk 256GB, Ram 16GB </td>
-        </tr>
-        <tr>
-            <th>รหัสผลิตภัณฑ์</th>
-            <td>336210057SP339</td>
-        </tr>
-        <tr>
-            <th>ปัญหาที่พบ</th>
-            <td>Software </td>
-        </tr>
-        <tr>
-            <th>ยี่ห้อ</th>
-            <td>HP</td>
-        </tr>
-        <tr>
-            <th>ระบบปฏิบัติการ </th>
-            <td>Windows 10 Pro</td>
-        </tr>
-        <tr>
-            <th>โปรแกรมสำนักงาน </th>
-            <td>Word, PowerPoint, Excel, One Note</td>
-        </tr>
-        <tr>
-            <th>โปรแกรม</th>
-            <td>SPSS, Line, Android Studio, VLC</td>
-        </tr>
-        <tr>
-            <th>สิ่งที่นำมาด้วย</th>
-            <td>กระเป๋า, เมาส์</td>
-        </tr>
-        <tr>
-            <th>หมายเหตุ</th>
-            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus adipisci nulla quisquam amet?
-                Sit dignissimos inventore libero non quibusdam ratione alias ducimus esse rerum voluptatum aperiam,
-                voluptate impedit ab corporis!</td>
-        </tr>
-    </table>
-    <div>
-        <div class="float-left">
-            <p> ลงชื่อ .................................................................. พนักงานบันทึกข้อมูล<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                (......นายปิยพงษ์
-                หินเกย......)
-            </p>
-        </div>
-        <div class="float-right">
-            <p> ลงชื่อ .................................................................. ผู้ขอรับบริการ<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                (.......นายบัณฑิต
-                นันทะเทศ ......)
-            </p>
-        </div>
-        <div class="clearfix"></div>
+    <br>
+    <div class="float-left" style=" margin-left:-240px;">
+        <strong>ที่</strong>&nbsp; {{-- เพื่มข้อความ --}} ศธ.๐๕๓๓๒๖/๔๐๖
+        <div style="margin-top:-40px; margin-left:10px;">
+            ....................................................................................</div>
     </div>
-    <div style="border-top: #aaa dashed 1px; margin-top: 20px;">
-        <div style="margin-top: -13px; "><img class="float-left" src="{{ public_path('/images/cut.png') }}" alt=""
-                width="24">
-            <!-- <span style="font-size: 10px; color: #333;">ฉีกตามรอยปุ</span></div> -->
+    <div class="float-left" style=" margin-top:50px; margin-right:-120px;">
+            <strong>วันที่</strong>&nbsp; {{-- เพื่มข้อความ --}}๙ พฤศจิกายน ๒๕๖๑
+            <div style="margin-top:-40px; margin-left:28px;">
+                .....................................................</div>
         </div>
+        <br>
+        <div class="float-left" style="margin-left:-450px;">
+                <strong>เรื่อง</strong>&nbsp; {{-- เพื่มข้อความ --}}ขอจัดส่งรายละเอียดการจัดซื้อวัสดุ ประจำปีงบประมาณ พ.ศ.๒๕๖๒
+                <div style="margin-top:-40px; margin-left:30px;">
+                    ...........................................................................................................................................</div>
+            </div><br>
+
+<div class="float-left" style="margin-left:-570px; margin-top:60px;">
+                <strong>เรียน</strong>&nbsp; {{-- เพื่มข้อความ --}}ผู้อำนวยการกองคลัง
+            </div>
+
+            <div>
+            <p style="text-indent: 50px; margin-top:20px;"> ตามที่มหาวิทยาลัยขอความอนุเคราะห์ให้แต่ละหน่วยงานจัดส่งข้อมูลปริมาณการใช้วัสดุ ประจําปีงบประมาณ พ.ศ. ๒๕๖๒ นั้น
+                </p>
+
+
+
+            </div>
+
+
+
+
+
+
 
 </body>
 
