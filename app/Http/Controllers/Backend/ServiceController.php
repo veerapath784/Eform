@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Barryvdh\DomPDF\Facade as PDF;
+use App\Memo;
 
 class ServiceController extends Controller
 {
@@ -51,7 +52,11 @@ class ServiceController extends Controller
     }
     public function preview($id)
     {
-        $pdf = PDF::loadView('backend.preview');
+        $memo = Memo::find($id);
+        $data = [
+            'memo' => $memo
+        ];
+        $pdf = PDF::loadView('backend.preview', $data);
 
         return $pdf->stream();
     }

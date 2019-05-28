@@ -171,50 +171,54 @@
     </div>
 
     <div>
-        <div class="float-left" >
-            <strong>ส่วนราชการ</strong>&nbsp; {{-- เพื่มข้อความ --}} สำนักดิจิทัลเพื่อการศึกษา
+        <div class="float-left">
+            <strong>ส่วนราชการ</strong>&nbsp; {{-- เพื่มข้อความ --}} {{$memo->part}}
             <div style="margin-top:-40px; margin-left:80px;">
                 ...............................................................</div>
         </div>
         <div class="float-right">
-            <strong>โทร.</strong>&nbsp; {{-- เพื่มข้อความ --}}๕๖๘๖
+            <strong>โทร.</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->phone}}
             <div style="margin-top:-40px; margin-left:-20px;">
                 ..................................................................</div>
         </div>
     </div>
     <br>
     <div class="float-left" style=" margin-left:-240px;">
-        <strong>ที่</strong>&nbsp; {{-- เพื่มข้อความ --}} ศธ.๐๕๓๓๒๖/๔๐๖
+        <strong>ที่</strong>&nbsp; {{-- เพื่มข้อความ --}} {{$memo->at}}
         <div style="margin-top:-40px; margin-left:10px;">
             ....................................................................................</div>
     </div>
     <div class="float-left" style=" margin-top:50px; margin-right:-120px;">
-            <strong>วันที่</strong>&nbsp; {{-- เพื่มข้อความ --}}๙ พฤศจิกายน ๒๕๖๑
-            <div style="margin-top:-40px; margin-left:28px;">
-                .....................................................</div>
+        <strong>วันที่</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->date}}
+        <div style="margin-top:-40px; margin-left:28px;">
+            .....................................................</div>
+    </div>
+    <br>
+    <div class="float-left" style="margin-left:-450px;">
+        <strong>เรื่อง</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->subject}}
+        <div style="margin-top:-40px; margin-left:30px;">
+            ...........................................................................................................................................
         </div>
-        <br>
-        <div class="float-left" style="margin-left:-450px;">
-                <strong>เรื่อง</strong>&nbsp; {{-- เพื่มข้อความ --}}ขอจัดส่งรายละเอียดการจัดซื้อวัสดุ ประจำปีงบประมาณ พ.ศ.๒๕๖๒
-                <div style="margin-top:-40px; margin-left:30px;">
-                    ...........................................................................................................................................</div>
-            </div><br>
+    </div><br>
 
-<div class="float-left" style="margin-left:-570px; margin-top:60px;">
-                <strong>เรียน</strong>&nbsp; {{-- เพื่มข้อความ --}}ผู้อำนวยการกองคลัง
-            </div>
+    <div class="float-left" style="margin-left:-570px; margin-top:60px;">
+        <strong>เรียน</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->study}}
+    </div><br><br><br>
+<div style="margin-right:-33px;">
+<p > <dd> 1. ควรแจ้งขอใช้รถราชการล่วงหน้า </dd>อย่างน้อย 1 วัน โดยกรอกข้อมูลในแบบขออนุญาตใช้รถราชการ ส่งยัง กองกลาง สำนักงานอธิการบดี
+    2. ห้ามผู้ขอใช้รถและพนักงานคนขับรถยนต์ นำรถออกนอกเส้นทางราชการโดยเด็ดขาด หากเกิดอุบัติเหตุผู้ควบคุมรถจะต้องรับผิดชอบ
+    3. ทางหน่วยงานที่จะขอใช้รถมหาวิทยาลัยราชภัฏเชียงใหม่ จะต้องมีการติดตามผลการอนุมัติว่าอนุมัติหรือไม่ โดยตรวจสอบผ่านเว็บไซต์ เลือกเมนูรายการจอง</p>
+</div><br>
 
-            <div>
-            <p style="text-indent: 50px; margin-top:20px;"> ตามที่มหาวิทยาลัยขอความอนุเคราะห์ให้แต่ละหน่วยงานจัดส่งข้อมูลปริมาณการใช้วัสดุ ประจําปีงบประมาณ พ.ศ. ๒๕๖๒ นั้น
-                </p>
+<div class="float-left" style="margin-left:33px;" >
+    {{$memo->ending}}
+</div><br><br><br><br><br><br>
 
-
-
-            </div>
-
-
-
-
+<div class="float-right">
+    ({{$memo->sign}})
+    <br>
+    <div style="margin-top:-10px; margin-left:-45px;">ผู้อำนวยการสำนักงานดิจิทัลเพื่อการศึกษา</div>
+</div>
 
 
 
