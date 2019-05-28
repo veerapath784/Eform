@@ -37,7 +37,7 @@
             font-family: "THSarabunNew";
             font-size: 24px;
             margin-left: 85px;
-            margin-right: 70px;
+            margin-right: 60px;
         }
 
         .center {
@@ -178,36 +178,34 @@
         </div>
         <div class="float-right">
             <strong>โทร.</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->phone}}
-            <div style="margin-top:-40px; margin-left:-20px;">
+            <div style="margin-top:-40px; margin-left:-25px;">
                 ..................................................................</div>
         </div>
     </div>
     <br>
     <div class="float-left" style=" margin-left:-240px;">
-        <strong>ที่</strong>&nbsp; {{-- เพื่มข้อความ --}} {{$memo->at}}
+        <strong>ที่</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{-- เพื่มข้อความ --}} {{$memo->at}}
         <div style="margin-top:-40px; margin-left:10px;">
             ....................................................................................</div>
     </div>
     <div class="float-left" style=" margin-top:50px; margin-right:-120px;">
-        <strong>วันที่</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->date}}
+        <strong>วันที่</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{-- เพื่มข้อความ --}}{{$memo->date}}
         <div style="margin-top:-40px; margin-left:28px;">
-            .....................................................</div>
+            ........................................................</div>
     </div>
     <br>
-    <div class="float-left" style="margin-left:-450px;">
-        <strong>เรื่อง</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->subject}}
+    <div class="float-left" style="margin-left:-460px;">
+        <strong>เรื่อง</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{-- เพื่มข้อความ --}}{{$memo->subject}}
         <div style="margin-top:-40px; margin-left:30px;">
-            ...........................................................................................................................................
+            ..............................................................................................................................................
         </div>
     </div><br>
 
-    <div class="float-left" style="margin-left:-570px; margin-top:60px;">
+    <div class="float-left" style="margin-left:-584px; margin-top:60px;">
         <strong>เรียน</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->study}}
     </div><br><br><br>
 <div style="margin-right:-33px;">
-<p > <dd> 1. ควรแจ้งขอใช้รถราชการล่วงหน้า </dd>อย่างน้อย 1 วัน โดยกรอกข้อมูลในแบบขออนุญาตใช้รถราชการ ส่งยัง กองกลาง สำนักงานอธิการบดี
-    2. ห้ามผู้ขอใช้รถและพนักงานคนขับรถยนต์ นำรถออกนอกเส้นทางราชการโดยเด็ดขาด หากเกิดอุบัติเหตุผู้ควบคุมรถจะต้องรับผิดชอบ
-    3. ทางหน่วยงานที่จะขอใช้รถมหาวิทยาลัยราชภัฏเชียงใหม่ จะต้องมีการติดตามผลการอนุมัติว่าอนุมัติหรือไม่ โดยตรวจสอบผ่านเว็บไซต์ เลือกเมนูรายการจอง</p>
+{!!$memo->deteil!!}
 </div><br>
 
 <div class="float-left" style="margin-left:33px;" >

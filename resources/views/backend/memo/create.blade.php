@@ -87,7 +87,7 @@
                     </div>
 
         </div>
-        <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> บันทึกข้อมูล</button>
+        <button type="submit" class="btn btn-primary"> บันทึกข้อมูล</button>
         </form>
     </div>
 </div>

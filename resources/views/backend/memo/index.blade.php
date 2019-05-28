@@ -9,18 +9,18 @@
         <div class="container mt-3">
             <h4 class="card-title">รายการ บันทึกข้อความ</h4>
             <span class="float-right"><a href="/backend/memo/create" class="btn btn-sm btn-success"><i
-                class="fa fa-plus"></i>
-            เพิ่มหนังสือบันทึกข้อความ</a></span>
+                        class="fa fa-plus"></i>
+                    เพิ่มหนังสือบันทึกข้อความ</a></span>
         </div>
         <div class="card-body">
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered ">
-                        <tr  class="text-center">
+                        <tr class="text-center">
                             <th>#</th>
-                            <th >เรื่อง</th>
+                            <th>เรื่อง</th>
 
-                            <th width="100">จัดการ</th>
+                            <th width="150">จัดการ</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -28,15 +28,18 @@
                             <tr>
                                 <td class="text-center">{{$memo->id}}</td>
                                 <td>{{$memo->subject}}</td>
-                                <td >
+                                <td class="text-center">
                                     <div class="button-group">
                                         <a href="/backend/memo/{{$memo->id}}/edit" class="btn btn-warning btn-sm"><i
                                                 class="fa fa-edit"></i></a>
 
-                                        <a href="javaScript: deleteItem('{{$memo->id}}')" class="btn  btn-danger btn-sm">
-                                            <i class="fa fa-trash"></i>
-                                            <a href="javaScript: deleteItem('{{$memo->id}}')" class="btn  btn-danger btn-sm">
-                                                    <i class="fa fa-trash"></i>
+                                        <a href="javaScript: deleteItem('{{$memo->id}}')"
+                                            class="btn  btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i></a>
+
+                                        <a href="/backend/preview/{{$memo->id}}" class="btn btn-info btn-sm"><i
+                                                class="fa fa-print" aria-hidden="true"></i></a>
+
                                         </a>
                                     </div>
                                 </td>
@@ -47,7 +50,7 @@
                 </div>
 
 
-        @section('script')
+                @section('script')
                 <script>
                     var deleteItem = function deleteItem(id) {
 
@@ -72,15 +75,15 @@
                     }
                 </script>
             </div>
-        @endsection
+            @endsection
         </div>
 
 
 
 
 
-        </div>
     </div>
+</div>
 </div>
 
 
