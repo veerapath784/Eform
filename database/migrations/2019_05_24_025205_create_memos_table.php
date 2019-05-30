@@ -24,6 +24,7 @@ class CreateMemosTable extends Migration
             $table->longtext('deteil')->comment('เนื้อหา');
             $table->string('ending')->comment('จึงเรียนมา');
             $table->string('sign')->comment('ลงนาม');
+            $table->string('position')->comment('ตำแหน่ง');
             $table->timestamps();
         });
     }

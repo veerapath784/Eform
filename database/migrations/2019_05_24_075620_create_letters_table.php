@@ -15,6 +15,17 @@ class CreateLettersTable extends Migration
     {
         Schema::create('letters', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('at')->comment('ที่');
+            $table->string('address')->comment('ที่อยู่');
+            $table->date('date')->comment('วันที่');
+            $table->string('subject')->comment('เรื่อง');
+            $table->string('study')->comment('เรียน');
+            $table->longtext('deteil')->comment('เนื้อหา');
+            $table->string('ending')->comment('ขอแสดงความนับถือ');
+            $table->string('sign')->comment('ลงนาม');
+            $table->string('position')->comment('ตำแหน่ง');
+            $table->string('phone')->comment('โทร');
+
             $table->timestamps();
         });
     }

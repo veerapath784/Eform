@@ -21,9 +21,10 @@ Route::group(['prefix' => 'backend'], function(){
 
     //memo->บันทึกข้อความ
     Route::resource('memo', 'Backend\MemoController');
+    Route::resource('letter', 'Backend\LetterController');
 
 
-    Route::get('/preview/{id}', 'Backend\ServiceController@preview');
+    Route::get('/printing_memo/{id}', 'Backend\ServiceController@printing');
 
 
 });

@@ -50,13 +50,13 @@ class ServiceController extends Controller
     {
         //
     }
-    public function preview($id)
+    public function printing($id)
     {
         $memo = Memo::find($id);
         $data = [
             'memo' => $memo
         ];
-        $pdf = PDF::loadView('backend.preview', $data);
+        $pdf = PDF::loadView('backend.printing_memo', $data);
 
         return $pdf->stream();
     }

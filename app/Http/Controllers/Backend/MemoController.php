@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Memo;
+use Barryvdh\DomPDF\Facade as PDF;
+use App\MEMo;
 
 class MemoController extends Controller
 {        protected $rules = [
@@ -62,6 +63,7 @@ protected $path = "/backend/memo";
         $memo->ending = $request->input('ending');
         $memo->study  = $request->input('study');
         $memo->sign = $request->input('sign');
+        $memo->position = $request->input('position');
         $memo       ->save();
         return redirect($this->path);
     }
@@ -92,6 +94,16 @@ protected $path = "/backend/memo";
         return view('backend.memo.edit', $data);
     }
 
+
+    public function printing($id)
+    {
+        $memo = Memo::find($id);
+
+        $pdf = PDF::loadView('backend.printing_memo', $memo);
+
+        return $pdf->stream();
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -112,6 +124,7 @@ protected $path = "/backend/memo";
         $memo->ending = $request->input('ending');
         $memo->study  = $request->input('study');
         $memo->sign = $request->input('sign');
+        $memo->position = $request->input('position');
         $memo->save();
 
         return redirect($this->path);

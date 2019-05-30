@@ -203,22 +203,22 @@
 
     <div class="float-left" style="margin-left:-584px; margin-top:60px;">
         <strong>เรียน</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->study}}
-    </div><br><br><br>
-<div style="margin-right:-33px;">
-{!!$memo->deteil!!}
-</div><br>
-
+    </div><br><br><br><br>
+<div  style="margin-left:0cm; margin-right:0cm; text-align:justify ">
+ <div style=" text-indent: 1.5em;">{!!$memo->deteil!!}</div>
+</div>
+<footer >
 <div class="float-left" style="margin-left:33px;" >
     {{$memo->ending}}
-</div><br><br><br><br><br><br>
+</div><br><br><br>
 
 <div class="float-right">
     ({{$memo->sign}})
     <br>
-    <div style="margin-top:-10px; margin-left:-45px;">ผู้อำนวยการสำนักงานดิจิทัลเพื่อการศึกษา</div>
+    <div style="margin-top:-10px; margin-left:-45px;">{{$memo->position}}</div>
 </div>
 
-
+</footer>
 
 </body>
 

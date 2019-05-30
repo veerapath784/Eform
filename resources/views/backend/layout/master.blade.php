@@ -71,9 +71,15 @@
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="/backend/memo">
-                    <i class="fas fa-fw fa-users"></i>
+                    <i class="fa fa-comments-o" aria-hidden="true"></i>
                     <span>บันทึกข้อความ</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/backend/letter">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <span>หนังสือภายนอก</span></a>
+            </li>
+
 
 
 

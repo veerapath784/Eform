@@ -71,7 +71,7 @@
                                 <input type="text" name="ending" class="form-control">
                             </div> --}}
                             <div class="form-group col-md-7">
-                                <label for="inputState">State</label>
+                                <label for="inputState">คำลงท้าย</label>
                                 <select id="inputState" name="ending" class="form-control">
                                   <option selected>{{$memo->ending}}</option>
                                   <option>จึงเรียนมาเพื่อโปรดพิจารณา</option>
@@ -84,6 +84,12 @@
                 <div class="form-group col-md-5">
                         <label for="inputPhone">ลงนาม :</label>
                 <input type="text" name="sign" value="{{$memo->sign}}" class="form-control">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="inputText">ตำแหน่ง :</label>
+                            <input type="text" name="position" value="{{$memo->position}}" class="form-control">
+                        </div>
                     </div>
 
         </div>

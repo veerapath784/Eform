@@ -3,11 +3,11 @@
 
 
 <h1 class="h3 mb-4 text-gray-800"><i class="fa fa-file-text-o" aria-hidden="true"></i>
-    แบบบันทึกข้อความ</h1>
+    แบบหนังสือภายนอก</h1>
 <div class="card shadow ">
     <div class="card-heading">
         <div class="container mt-3">
-            <h4 class="card-title">สร้าง บันทึกข้อความ</h4>
+            <h4 class="card-title">สร้าง หนังสือภายนอก</h4>
         </div>
         <div class="card-body">
 
@@ -21,27 +21,24 @@
             </div>
             @endif
 
-            <form action="/backend/memo" method="POST" >
+            <form action="/backend/letter" method="POST" >
 
                 @csrf
             <div class=" container">
                 <div class="form-row">
-                        <div class="form-group col-md-5">
-                                <label for="inputPhone">ส่วนราชการ :</label>
-                                <input type="text" name="part" class="form-control">
-                            </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="inputText">ที่ :</label>
+                            <input type="text" name="at" class="form-control">
+                        </div>
 
 
-                    <div class="form-group col-md-5">
-                        <label for="inputPhone">โทร :</label>
-                        <input type="text" name="phone" class="form-control">
+                    <div class="form-group col-md-8">
+                        <label for="inputPhone">ที่อยู่ :</label>
+                        <textarea type="text" name="address" class="form-control"></textarea>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="inputText">ที่ :</label>
-                        <input type="text" name="at" class="form-control">
-                    </div>
+
 
                     <div class="form-group col-md-4">
                         <label for="inputDate">วันที่ :</label>
@@ -74,10 +71,8 @@
                                 <label for="inputState">คำลงท้าย</label>
                                 <select id="inputState" name="ending" class="form-control">
                                   <option selected>คำลงท้าย...</option>
-                                  <option>จึงเรียนมาเพื่อโปรดพิจารณา</option>
-                                  <option>จึงเรียนมาเพื่อโปรดทราบ</option>
-                                  <option>จึงเรียนมาเพื่อโปรดให้ความร่วมมือ</option>
-                                  <option>จึงเรียนมาเพื่อโปรดทราบ และพิจารณา</option>
+                                  <option>ขอแสดงความนับถือ</option>
+
                                 </select>
                               </div>
                 </div>
@@ -85,12 +80,17 @@
                         <label for="inputPhone">ลงนาม :</label>
                         <input type="text" name="sign" class="form-control">
                     </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
+
+
+                        <div class="form-group col-md-7">
                             <label for="inputText">ตำแหน่ง :</label>
                             <input type="text" name="position" class="form-control">
                         </div>
+
+
+                    <div class="form-group col-md-5">
+                        <label for="inputPhone">โทร :</label>
+                        <input type="text" name="phone" class="form-control">
                     </div>
 
         </div>
