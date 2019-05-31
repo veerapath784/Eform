@@ -17,6 +17,7 @@ class LetterController extends Controller
     'study' => 'required',
     'sign' => 'required',
 ];
+protected $path = "/backend/letter";
     /**
      * Display a listing of the resource.
      *
@@ -49,7 +50,7 @@ class LetterController extends Controller
     {
         $request->validate($this->rules);
         $letter = new Letter();
-        $letter->part = $request->input('address');
+        $letter->address = $request->input('address');
         $letter->phone = $request->input('phone');
         $letter->at = $request->input('at');
         $letter->date = $request->input('date');
@@ -60,6 +61,7 @@ class LetterController extends Controller
         $letter->sign = $request->input('sign');
         $letter->position = $request->input('position');
         $letter       ->save();
+
         return redirect($this->path);
     }
 
@@ -97,10 +99,11 @@ class LetterController extends Controller
     {
         $letter = Letter::find($id);
         $data = [
-            'letters' => $letter
+            'letter' => $letter
         ];
         return view('backend.letter.edit', $data);
     }
+
 
 
     /**
@@ -113,8 +116,8 @@ class LetterController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate($this->rules);
-        $letter = Letter::find();
-        $letter->part = $request->input('address');
+        $letter = Letter::find($id  );
+        $letter->address = $request->input('address');
         $letter->phone = $request->input('phone');
         $letter->at = $request->input('at');
         $letter->date = $request->input('date');
