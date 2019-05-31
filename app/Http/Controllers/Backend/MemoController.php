@@ -98,8 +98,10 @@ protected $path = "/backend/memo";
     public function printing($id)
     {
         $memo = Memo::find($id);
-
-        $pdf = PDF::loadView('backend.printing_memo', $memo);
+        $data = [
+            'memo' => $memo
+        ];
+        $pdf = PDF::loadView('backend.printing_memo', $data);
 
         return $pdf->stream();
     }

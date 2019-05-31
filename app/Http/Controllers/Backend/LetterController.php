@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Barryvdh\DomPDF\Facade as PDF;
 use App\Letter;
 
 class LetterController extends Controller
@@ -86,9 +87,9 @@ protected $path = "/backend/letter";
 
     public function printing($id)
     {
-        $memo = Memo::find($id);
+        $letter = Letter::find($id);
 
-        $pdf = PDF::loadView('backend.printing_letter', $memo);
+        $pdf = PDF::loadView('backend.printing_letter', $letter);
 
         return $pdf->stream();
     }

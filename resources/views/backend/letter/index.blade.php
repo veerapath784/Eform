@@ -37,7 +37,7 @@
                                             class="btn  btn-danger btn-sm">
                                             <i class="fa fa-trash"></i></a>
 
-                                        <a href="/backend/printing_memo/{{$letter->id}}" class="btn btn-info btn-sm"><i
+                                        <a href="/backend/printing_letter/{{$letter->id}}" class="btn btn-info btn-sm"><i
                                                 class="fa fa-print" aria-hidden="true"></i></a>
 
                                         </a>

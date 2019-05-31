@@ -55,6 +55,18 @@
 
         }
 
+        .table {
+            border-spacing: 0;
+            width: 300px;
+        }
+
+        th,
+        td {
+            border: 0.01em solid #333;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
         .float-left {
             float: left;
             margin-top: 50px;
@@ -205,7 +217,9 @@
         <strong>เรียน</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->study}}
     </div><br><br><br><br>
 <div  style="margin-left:0cm; margin-right:0cm; text-align:justify ">
- <div style=" text-indent: 1.5em;">{!!$memo->deteil!!}</div>
+ <div style=" text-indent: 1.5em; line-height : 80%;  text-align: justify;
+">{!!$memo->deteil!!}
+</div>
 </div>
 <footer >
 <div class="float-left" style="margin-left:33px;" >
@@ -217,6 +231,7 @@
     <br>
     <div style="margin-top:-10px; margin-left:-45px;">{{$memo->position}}</div>
 </div>
+
 
 </footer>
 
