@@ -102,6 +102,7 @@ protected $path = "/backend/memo";
             'memo' => $memo
         ];
         $pdf = PDF::loadView('backend.printing_memo', $data);
+        $pdf->setPaper('A4');
 
         return $pdf->stream();
     }

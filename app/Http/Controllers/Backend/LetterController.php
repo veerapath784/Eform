@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Barryvdh\DomPDF\Facade as PDF;
 use App\Letter;
 
+
 class LetterController extends Controller
 {    protected $rules = [
     'address' => 'required',
@@ -88,9 +89,11 @@ protected $path = "/backend/letter";
     public function printing($id)
     {
         $letter = Letter::find($id);
-
-        $pdf = PDF::loadView('backend.printing_letter', $letter);
-
+        $data = [
+            'letter' => $letter
+        ];
+        $pdf = PDF::loadView('backend.printing_letter', $data);
+        $pdf->setPaper('A4');
         return $pdf->stream();
     }
 
