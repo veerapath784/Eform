@@ -17,7 +17,7 @@ class CreateLettersTable extends Migration
             $table->bigIncrements('id');
             $table->string('at')->comment('ที่');
             $table->string('address')->comment('ที่อยู่');
-            $table->date('date')->comment('วันที่');
+            $table->string('date')->comment('วันที่');
             $table->string('subject')->comment('เรื่อง');
             $table->string('study')->comment('เรียน');
             $table->longtext('deteil')->comment('เนื้อหา');

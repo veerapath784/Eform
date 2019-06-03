@@ -34,14 +34,14 @@
 
                     <div class="form-group col-md-8">
                         <label for="inputPhone">ที่อยู่ :</label>
-                        <textarea type="text" name="address" class="form-control">{{$letter->address}}</textarea>
+                        <textarea id="summernote1" name="address">{{$letter->address}}</textarea>
                     </div>
                 </div>
 
 
                     <div class="form-group col-md-4">
                         <label for="inputDate">วันที่ :</label>
-                        <input type="date" name="date"value="{{$letter->date}}" class="form-control">
+                        <input type="text" name="date"value="{{$letter->date}}" class="form-control">
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@
                 <div class="form-row">
                         <div class="form-group col-md-12">
                                 <label for="inputText">เนื้อหา :</label>
-                <textarea id="summernote" name="deteil">{{$letter->deteil}}</textarea>
+                <textarea id="summernote2" name="deteil">{{$letter->deteil}}</textarea>
                         </div>
             </div>
                 <div class="form-row">
@@ -102,7 +102,18 @@
 @section('script')
 <script>
     $(document).ready(function() {
-    $('#summernote').summernote({
+    $('#summernote1').summernote({
+        placeholder: 'เนื้อหา ข้อความ',
+        tabsize: 1,
+        height: 300,                 // set editor height
+  minHeight: null,             // set minimum height of editor
+  maxHeight: null,             // set maximum height of editor
+  focus: true
+      });
+  });
+
+  $(document).ready(function() {
+    $('#summernote2').summernote({
         placeholder: 'เนื้อหา ข้อความ',
         tabsize: 1,
         height: 300,                 // set editor height

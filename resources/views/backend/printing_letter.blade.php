@@ -35,9 +35,10 @@
 
         body {
             font-family: "THSarabunNew";
-            font-size: 24px;
-            margin-left: 85px;
-            margin-right: 60px;
+            font-size: 23px;
+            margin-left: 75px;
+            margin-right: 4%;
+            margin-bottom: 1px;
         }
 
         .center {
@@ -166,7 +167,8 @@
         button.bg-gray-900:hover {
             background-color: #0c0e10 !important
         }
-        .img{
+
+        .img {
             text-align: center;
 
             margin-left: -35px;
@@ -177,24 +179,62 @@
 </head>
 
 <body>
-        <img src="{{ public_path('bg-white.png') }}" height="50px;">
-    <div class="img" >
+    <img src="{{ public_path('bg-white.png') }}" height="50px;">
+    <div class="img">
         <img src="{{ public_path('thai.png') }}" alt="" width="100px;">
     </div>
 
-    <div class="float-left" style="margin-top:-45px; margin-left:-50px; ">
+    <div class="float-left" style="margin-top:-45px; margin-left:-35px; ">
         <strong>ที่</strong>&nbsp;{{$letter->at}}
     </div>
-    <div class="float-right">
-        มหาวิทยาลัยราชภัฎเชียงใหม่ <br>
-        ๒๐๒ ตำบล ช้างเผือก อำเภอเมือง <br>
-        จังหวัดเชียงใหม่ ๕๐๓๐๐
+
+    <div class="float-right " style=" line-height : 30%; margin-top:5px;">
+        {!!$letter->address!!}
 
     </div>
-    <img src="{{ public_path('bg-white.png') }}" width="150px;">
+    <img src="{{ public_path('bg-white.png') }}" width="140px;">
     <div class="center" style="margin-left:90px;">
-        ๑ กุมภาพันธ์ ๒๕๖๑
+        {{$letter->date}}
     </div>
+    <div>
+        <div class="float-left" style="margin-left:-30px;"><strong>เรื่อง</strong></div>
+        <div class="float-left" style="margin-left:10px; margin-top:-23px;">
+            <p>{{$letter->subject}}</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="float-left" style="margin-left:-87.5%;">
+        <strong>เรื่อง</strong>&nbsp; {{$letter->study}}
+    </div>
+    <div class="float-right "
+        style="text-align: inherit; line-height : 100%; margin-top:80px; margin-left:-40px; margin-right:10px;">
+        <p>{!!$letter->deteil!!}</p>
+    </div>
+    <div class="float-right" style="margin-top:35%; margin-right:30%; line-height : 100%;">
+        <p style="text-align:center;">
+            {{$letter->ending}}
+            <br>
+            <br>
+            <br>
+            ({{$letter->sign}})
+            <br>
+            {{$letter->position}}
+        </p>
+        <span style="height:50px;
+        position:fixed;
+        margin-left:-130px;
+        bottom:0px;
+        width:100%;
+        z-index: 99;
+        font-size:16px;
+        line-height : 80%;">
+        สำนักดิจิทัลเพื่อการศึกษา<br>
+        โทร. {{$letter->phone}}
+    </span>
+    </div>
+
 
 </body>
 
