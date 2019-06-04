@@ -24,10 +24,10 @@
                         </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach($minutes as $minutes)
+                            @foreach($minutes as $minutes)
                             <tr>
                                 <td class="text-center">{{$minutes->id}}</td>
-                                <td>{{$minutes->subject}}</td>
+                                <td>{!!$minutes->heading!!}</td>
                                 <td class="text-center">
                                     <div class="button-group">
                                         <a href="/backend/minutes/{{$minutes->id}}/edit" class="btn btn-warning btn-sm"><i
@@ -44,7 +44,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
