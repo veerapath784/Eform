@@ -1,7 +1,5 @@
 @extends('backend.layout.master')
 @section('content')
-
-
 <h1 class="h3 mb-4 text-gray-800"><i class="fa fa-file-text-o" aria-hidden="true"></i>
     แบบหนังสือภายนอก</h1>
 <div class="card shadow ">
@@ -19,7 +17,6 @@
                         <tr class="text-center">
                             <th>#</th>
                             <th>เรื่อง</th>
-
                             <th width="150">จัดการ</th>
                         </tr>
                         </thead>
@@ -32,14 +29,12 @@
                                     <div class="button-group">
                                         <a href="/backend/letter/{{$letter->id}}/edit" class="btn btn-warning btn-sm"><i
                                                 class="fa fa-edit"></i></a>
-
                                         <a href="javaScript: deleteItem('{{$letter->id}}')"
                                             class="btn  btn-danger btn-sm">
                                             <i class="fa fa-trash"></i></a>
-
-                                        <a href="/backend/printing_letter/{{$letter->id}}" class="btn btn-info btn-sm"><i
-                                                class="fa fa-print" aria-hidden="true"></i></a>
-
+                                        <a href="/backend/printing_letter/{{$letter->id}}"
+                                            class="btn btn-info btn-sm"><i class="fa fa-print"
+                                                aria-hidden="true"></i></a>
                                         </a>
                                     </div>
                                 </td>
@@ -48,12 +43,9 @@
                         </tbody>
                     </table>
                 </div>
-
-
                 @section('script')
                 <script>
                     var deleteItem = function deleteItem(id) {
-
                         swal.fire({
                             title: "แน่ใจหรือไม่ ?",
                             text: "คุณต้องการลบข้อมูลนี้จริงหรือไม่ ?",
@@ -70,21 +62,12 @@
                                 });
                             }
                         })
-
-
                     }
                 </script>
             </div>
             @endsection
         </div>
-
-
-
-
-
     </div>
 </div>
 </div>
-
-
 @endsection
