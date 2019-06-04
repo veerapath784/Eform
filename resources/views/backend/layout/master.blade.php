@@ -79,6 +79,11 @@
                     <i class="fa fa-envelope-o" aria-hidden="true"></i>
                     <span>หนังสือภายนอก</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/backend/minutes">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <span>รายงารการประชุม</span></a>
+            </li>
 
 
 

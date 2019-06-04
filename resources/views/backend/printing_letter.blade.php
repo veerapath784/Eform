@@ -222,14 +222,14 @@
             <br>
             {{$letter->position}}
         </p>
-        <span style="height:50px;
+        <span style="height:20px;
         position:fixed;
         margin-left:-130px;
         bottom:0px;
         width:100%;
         z-index: 99;
-        font-size:16px;
-        line-height : 80%;">
+        font-size:20px;
+        line-height : 70%;">
         สำนักดิจิทัลเพื่อการศึกษา<br>
         โทร. {{$letter->phone}}
     </span>

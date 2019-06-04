@@ -22,6 +22,7 @@ Route::group(['prefix' => 'backend'], function(){
     //memo->บันทึกข้อความ
     Route::resource('memo', 'Backend\MemoController');
     Route::resource('letter', 'Backend\LetterController');
+    Route::resource('minutes', 'Backend\MinutesController');
 
 
     Route::get('/printing_memo/{id}', 'Backend\MemoController@printing');

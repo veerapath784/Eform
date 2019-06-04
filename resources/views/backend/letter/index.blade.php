@@ -3,14 +3,14 @@
 
 
 <h1 class="h3 mb-4 text-gray-800"><i class="fa fa-file-text-o" aria-hidden="true"></i>
-    แบบบันทึกข้อความ</h1>
+    แบบหนังสือภายนอก</h1>
 <div class="card shadow ">
     <div class="card-heading">
         <div class="container mt-3">
-            <h4 class="card-title">รายการ บันทึกข้อความ</h4>
+            <h4 class="card-title">รายการ หนังสือภายนอก</h4>
             <span class="float-right"><a href="/backend/letter/create" class="btn btn-sm btn-success"><i
                         class="fa fa-plus"></i>
-                    เพิ่มหนังสือบันทึกข้อความ</a></span>
+                    หนังสือภายนอก</a></span>
         </div>
         <div class="card-body">
             <div class="card-body">
