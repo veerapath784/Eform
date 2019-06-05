@@ -27,6 +27,7 @@ Route::group(['prefix' => 'backend'], function(){
 
     Route::get('/printing_memo/{id}', 'Backend\MemoController@printing');
     Route::get('/printing_letter/{id}', 'Backend\LetterController@printing');
+    Route::get('/printing_minutes/{id}', 'Backend\MinutesController@printing');
 
 
 });
