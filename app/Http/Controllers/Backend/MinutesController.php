@@ -82,6 +82,7 @@ protected $path = "/backend/minutes";
             'minutes' => $minutes
         ];
         $pdf = PDF::loadView('backend.printing_minutes', $data);
+        $pdf->setPaper('NewPage');
         $pdf->setPaper('A4');
 
         return $pdf->stream();

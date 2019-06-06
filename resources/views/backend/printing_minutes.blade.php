@@ -58,7 +58,7 @@
 
         .table {
             border-spacing: 0;
-            width: 300px;
+            width: 100%;
         }
 
         th,
@@ -194,22 +194,66 @@
     <div class="left edge"><strong><u>ผู้มาประชุม</u></strong>
         <div style="margin-left:10px; line-height : 30%;">{!!$minutes->meeting!!}</div>
     </div>
-    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;" >
+    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;">
     <div class="left edge" style="margin-top:-50px;"><strong><u>ผู้เข้าร่วมประชุม</u></strong>
         <div style="margin-left:10px; line-height : 30%;">{!!$minutes->attendees!!}</div>
     </div>
-    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;" >
+    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;">
     <div class="left edge" style="margin-top:-50px;"><strong><u>ผู้ไม่เข้าร่ามชุม</u></strong>
         <div style="margin-left:10px; line-height : 30%;">{!!$minutes->nonattendee!!}</div>
     </div>
-    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;" >
+    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;">
     <div class="left edge" style="margin-top:-50px;"><strong><u>เริ่มประชุมเวลา {!!$minutes->time!!}</u></strong>
         <div style="margin-left:10px; line-height : 30%;">{!!$minutes->start!!}</div>
     </div>
-    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;" >
-    <div class="left edge" style="margin-top:-50px;"><strong><u>ระเบียบวาระที่ ๑เรื่องที่ประทานแจ้งที่ประชุม</u></strong>
+    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;">
+    <div class="left edge" style="margin-top:-50px;"><strong><u>ระเบียบวาระที่ ๑
+                เรื่องที่ประทานแจ้งที่ประชุม</u></strong>
         <div style="margin-left:10px; line-height : 30%;">{!!$minutes->agenda1!!}</div>
     </div>
+    <img src="{{ public_path('bg-white.png') }}" height="3cm;">
+    <div class="left edge" style="margin-top:-50px;"><strong><u>ระเบียบวาระที่ ๒
+                เรื่องรับรองรายงานการประชุม</u></strong>
+        <div style="margin-left:10px; line-height : 80%;">{!!$minutes->agenda2!!}</div>
+    </div>
+    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;">
+    <div class="left edge" style="margin-top:-50px;"><strong><u>ระเบียบวาระที่ ๓ เรื่องสืบเนื่อง</u></strong>
+        <div style="margin-left:10px; line-height : 80%;">{!!$minutes->agenda3!!}</div>
+    </div>
+    <img src="{{ public_path('bg-white.png') }}" height="3cm;">
+    <div class="left edge" style="margin-top:-50px;"><strong><u>ระเบียบวาระที่ ๔ เรื่องเสนอเพื่อพิจารณา</u></strong>
+        <div style="margin-left:10px; line-height : 80%;">{!!$minutes->agenda4!!}</div>
+    </div>
+    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;">
+    <div class="left edge" style="margin-top:-50px;"><strong><u>ระเบียบวาระที่ ๕
+                เรื่องเสนอเพื่อรับทราบหรือทักท้วง</u></strong>
+        <div style="margin-left:10px; line-height : 60%;">{!!$minutes->agenda5!!}</div>
+    </div>
+    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;">
+    <div class="left edge" style="margin-top:-50px;"><strong><u>ระเบียบวาระที่ ๖ เรื่องอื่นๆ</u></strong>
+        <div style="margin-left:10px; line-height : 60%;">{!!$minutes->agenda6!!}</div>
+    </div>
+    <img src="{{ public_path('bg-white.png') }}" height="0.5cm;">
+    <div class="left edge" style="margin-top:-50px;"><strong>เลิกประชุมเวลา</strong>&nbsp; {!!$minutes->end!!}
+    </div>
+    <br>
+
+    <img src="{{ public_path('bg-white.png') }}" height="5cm;">
+
+    <div  style="margin-top:-110px; margin-left:8cm;">
+        <div style="margin-left:10px; line-height : 30%; text-align:center;">({!!$minutes->sign1!!})
+            <br>{!!$minutes->position1!!}
+        </div>
+
+
+    <br><br><br>
+
+    <div>
+        <div style="margin-left:10px; line-height : 30%; text-align:center;">({!!$minutes->sign2!!})
+            <br>{!!$minutes->position2!!}
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
