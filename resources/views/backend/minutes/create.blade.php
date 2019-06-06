@@ -105,30 +105,28 @@
                     </div>
 
 
+
                     <div class="form-row">
-                    <div class="form-group col-md-5">
-                        <label for="inputPhone">ลงนาม 1 :</label>
-                        <input type="text" name="sign1" class="form-control">
-                    </div>
+                            <div class="form-group col-md-5">
+                                <label for="inputPhone">ลงนาม 1 :</label>
+                                <input type="text" name="sign1"class="form-control">
+                            </div>
+                            <div class="form-group col-md-7">
+                                <label for="inputText">ตำแหน่ง 1 :</label>
+                                <textarea id="summernote0001" name="position1"></textarea>
+                            </div>
+                            </div>
+                            <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label for="inputPhone">ลงนาม 2 :</label>
+                                <input type="text" name="sign2" class="form-control">
+                            </div>
+                            <div class="form-group col-md-7">
+                                <label for="inputText">ตำแหน่ง 2 :</label>
+                                <textarea id="summernote0002" name="position2"></textarea>
+                            </div>
 
 
-                        <div class="form-group col-md-7">
-                            <label for="inputText">ตำแหน่ง 1 :</label>
-                            <input type="text" name="position1" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                    <div class="form-group col-md-5">
-                        <label for="inputPhone">ลงนาม 2 :</label>
-                        <input type="text" name="sign2" class="form-control">
-                    </div>
-
-
-                        <div class="form-group col-md-7">
-                            <label for="inputText">ตำแหน่ง 2 :</label>
-                            <input type="text" name="position2" class="form-control">
-                        </div>
-                    </div>
 
                 </div>
                 <button type="submit" class="btn btn-primary"> บันทึกข้อมูล</button>
@@ -256,6 +254,24 @@
 
   $(document).ready(function() {
     $('#summernote001').summernote({
+        placeholder: ' ',
+        tabsize: 1,
+        height: 100,                 // set editor height
+  minHeight: null,             // set minimum height of editor
+  maxHeight: null,             // set maximum height of editor
+      });
+  });
+  $(document).ready(function() {
+    $('#summernote0001').summernote({
+        placeholder: ' ',
+        tabsize: 1,
+        height: 100,                 // set editor height
+  minHeight: null,             // set minimum height of editor
+  maxHeight: null,             // set maximum height of editor
+      });
+  });
+  $(document).ready(function() {
+    $('#summernote0002').summernote({
         placeholder: ' ',
         tabsize: 1,
         height: 100,                 // set editor height
