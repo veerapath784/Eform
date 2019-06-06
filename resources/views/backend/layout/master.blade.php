@@ -92,7 +92,7 @@
             <hr class="sidebar-divider d-none d-md-block">
 
             <li class="nav-item mb-3">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('logout') }}">
                     <i class="fa fa-sign-out"></i>
                     <span>ออกจากระบบ</span></a>
             </li>
@@ -152,7 +152,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <i
-                                        class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>-</span>
+                                        class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>{{ Auth::user()->name }} </span>
                             </a>
                     </ul>
 

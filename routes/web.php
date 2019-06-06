@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'backend'], function(){
+Route::group(['prefix' => 'backend', 'middleware' => ['auth']], function(){
 
     Route::get('/', 'backend\DashboardController@index');
 
@@ -31,3 +31,16 @@ Route::group(['prefix' => 'backend'], function(){
 
 
 });
+
+
+Auth::routes();
+
+Route::get('logout', function(){
+    auth()->logout();
+    return redirect('/');
+});
+
+
+Auth::routes();
+
+
