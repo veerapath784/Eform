@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>..</title>
+    <title>หนังสือภายนอก</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
         @font-face {

@@ -13,7 +13,7 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                color: #fff;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -42,6 +42,21 @@
 
             .content {
                 text-align: center;
+            margin-top: -600px;
+            margin-left: 500px;
+            }
+            h1 {
+                display: inline-block;
+            font: bold 4.5em/1.5 Bebas, sans-serif;
+            color: #DD5E89; /*non-webkit fallback*/
+            font-size: 72px;
+            text-transform: uppercase;
+            background: -webkit-linear-gradient(135deg, #DD5E89, #F7BB97, #DD5E89);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-bottom: .1em;
+            margin-bottom: 0;
+            border-bottom: 1px solid #DD5E89;
             }
 
             .title {
@@ -49,9 +64,9 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fff;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 15px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -61,39 +76,55 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .gradient-button {
+                margin: 10px;
+                font-family: "Arial Black", Gadget, sans-serif;
+                font-size: 20px;
+                padding: 15px;
+                text-align: center;
+                text-transform: uppercase;
+                transition: 0.5s;
+                background-size: 200% auto;
+                color: #FFF;
+                box-shadow: 0 0 20px #eee;
+                border-radius: 10px;
+                width: 200px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+                cursor: pointer;
+                display: inline-block;
+                border-radius: 25px;
+            }
+            .gradient-button:hover{
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+                margin: 8px 10px 12px;
+            }
+            .gradient-button-1 {background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%)}
+            .gradient-button-1:hover { background-position: right center; }
+
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div>
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a class="gradient-button gradient-button-1" href="{{ url('/backend') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a class="gradient-button gradient-button-1" href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a class="gradient-button gradient-button-1" href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="/backend">Backend</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+            <div>
+                <img src="/work.jpg" width="100%" height="100%">
+                <div class="content links"><h1>E-Form</h1></div>
             </div>
+            <div style="margin-top:-30px; margin-left:900px; font-size:20px;"> ระบบจัดการเอกสารราชการ</div>
         </div>
     </body>
 </html>

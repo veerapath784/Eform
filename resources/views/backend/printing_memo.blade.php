@@ -35,17 +35,14 @@
 
         body {
             font-family: "THSarabunNew";
-            font-size: 24px;
-            margin-left: 85px;
-            margin-right: 60px;
+            font-size: 22.5px;
+            /* margin-left: 85px;
+            margin-right: 60px; */
         }
 
         .center {
             text-align: center;
-            margin-left: -10.1px;
-            margin-top: -20px;
-            margin-bottom: -75px;
-            font-size: 18px;
+
         }
 
 
@@ -57,14 +54,17 @@
 
         .table {
             border-spacing: 0;
-            width: 300px;
+            width: 100%;
         }
 
         th,
-        td {
+        td,
+        tr {
             border: 0.01em solid #333;
             border-collapse: collapse;
-            padding: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
         }
 
         .float-left {
@@ -171,69 +171,56 @@
         button.bg-gray-900:hover {
             background-color: #0c0e10 !important
         }
+
+        .content {
+            margin-left: 65px;
+            margin-right: 65px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="float-left">
-        <img src="{{ public_path('thai.png') }}" alt="" width="65px;">
-    </div>
-    <div class="center">
-        <h1>บันทึกข้อความ</h1>
-    </div>
 
-    <div>
-        <div class="float-left">
-            <strong>ส่วนราชการ</strong>&nbsp; {{-- เพื่มข้อความ --}} {{$memo->part}}
-            <div style="margin-top:-40px; margin-left:80px;">
-                ...............................................................</div>
+
+
+    <img src="{{ public_path('head.jpg') }}" alt="" width="110%;" style="margin-left:-40px; margin-top:-40px;">
+    <div style="margin-top:-231px; margin-left:180px;">{{$memo->part}} </div>
+    <div style="margin-left:100px;  padding-top:-201px;">{{$memo->at}}</div>
+    <div style="margin-left:450px;  padding-top:-201px;">{{$memo->date}}</div>
+    <div style="margin-left:110px;  padding-top:-172px;">{{$memo->subject}}</div>
+    <div style="margin-left:110px;  padding-top:-131px;">{{$memo->study}}</div>
+
+    <div style="margin-left:0cm; margin-right:0cm; text-align:justify  ">
+        <div class="content" style=" text-indent: 1.5em; line-height : 80%; padding-top:-75px;  text-align: justify;
+               ">{!!$memo->deteil!!}
+
+            <div class="float-left" style="margin-left:23px;">
+                {{$memo->ending}}
+            </div>
         </div>
-        <div class="float-right">
-            <strong>โทร.</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->phone}}
-            <div style="margin-top:-40px; margin-left:-25px;">
-                ..................................................................</div>
+    </div>
+    <footer>
+        <br><br><br><br>
+
+        <div class="center" style="height:180px;
+        position:fixed;
+        margin-left:330px;
+        bottom:0px;
+        width:100%;
+        z-index: 99;
+
+       ">
+            ({{$memo->sign}})
+            <br>
+            <div style="margin-top:-10px; ">{{$memo->position}}</div>
         </div>
-    </div>
-    <br>
-    <div class="float-left" style=" margin-left:-240px;">
-        <strong>ที่</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{-- เพื่มข้อความ --}} {{$memo->at}}
-        <div style="margin-top:-40px; margin-left:10px;">
-            ....................................................................................</div>
-    </div>
-    <div class="float-left" style=" margin-top:50px; margin-right:-120px;">
-        <strong>วันที่</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{-- เพื่มข้อความ --}}{{$memo->date}}
-        <div style="margin-top:-40px; margin-left:28px;">
-            ........................................................</div>
-    </div>
-    <br>
-    <div class="float-left" style="margin-left:-460px;">
-        <strong>เรื่อง</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{-- เพื่มข้อความ --}}{{$memo->subject}}
-        <div style="margin-top:-40px; margin-left:30px;">
-            ..............................................................................................................................................
-        </div>
-    </div><br>
-
-    <div class="float-left" style="margin-left:-584px; margin-top:60px;">
-        <strong>เรียน</strong>&nbsp; {{-- เพื่มข้อความ --}}{{$memo->study}}
-    </div><br><br><br><br>
-<div  style="margin-left:0cm; margin-right:0cm; text-align:justify ">
- <div style=" text-indent: 1.5em; line-height : 80%;  text-align: justify;
-">{!!$memo->deteil!!}
-</div>
-</div>
-<footer >
-<div class="float-left" style="margin-left:33px;" >
-    {{$memo->ending}}
-</div><br><br><br>
-
-<div class="float-right">
-    ({{$memo->sign}})
-    <br>
-    <div style="margin-top:-10px; margin-left:-45px;">{{$memo->position}}</div>
-</div>
 
 
-</footer>
+    </footer>
+
+
+
+
 
 </body>
 

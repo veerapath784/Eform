@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>..</title>
+    <title>รายงานการประชุม</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
         @font-face {
@@ -246,7 +246,7 @@
         </div>
 
 
-    <br><br><br>
+    <br><br><br><br>
 
     <div>
         <div style="margin-left:10px; line-height : 30%; text-align:center;">({!!$minutes->sign2!!})
