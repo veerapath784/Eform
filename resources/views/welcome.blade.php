@@ -104,17 +104,17 @@
 
         </style>
     </head>
-    <body>
-        <div>
+    <body >
+        <div >
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a class="gradient-button gradient-button-1" href="{{ url('/backend') }}">Home</a>
+                        <a class="gradient-button gradient-button-1" href="{{ url('/backend') }}">หน้าหลัก</a>
                     @else
-                        <a class="gradient-button gradient-button-1" href="{{ route('login') }}">Login</a>
+                        <a class="gradient-button gradient-button-1" href="{{ route('login') }}">เข้าสู่ระบบ</a>
 
                         @if (Route::has('register'))
-                            <a class="gradient-button gradient-button-1" href="{{ route('register') }}">Register</a>
+                            <a class="gradient-button gradient-button-1" href="{{ route('register') }}">สมัควมาชิก</a>
                         @endif
                     @endauth
                 </div>
